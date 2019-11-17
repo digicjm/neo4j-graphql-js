@@ -497,10 +497,5 @@ const validateRelationTypeDirectedFields = (
   outputType
 ) => {
   // directive to and from are not the same and neither are equal to this
-  if (fromName !== toName && toName !== typeName && fromName !== typeName) {
-    throw new Error(
-      `The ${fieldName} field on the ${typeName} node type uses the ${outputType} relationship type but ${outputType} comes from ${fromName} and goes to ${toName}`
-    );
-  }
   return true;
 };
